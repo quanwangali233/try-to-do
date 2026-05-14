@@ -4,69 +4,121 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-       
-    <style>
-        body {
-            margin:0;
+<style>
+    body{
+        margin:0;
+        height: 100vh;
+        background-color:#eee;
+    }
+    /* *{
+        border:1px solid black;
+    }*/
+    .yinYing{
+        box-shadow: rgb(0 0 0 /20% ) 0px 2px 1px -1px,rgb(0 0 0 / 14%) 0px 1px 1px 0px, rgb(0 0 0 /12%) 0px 1px 3px 0px;;
+    }
+    .baiSe{
+        background-color: white;
+    }
+    .flex{
+        display: flex;
+    }
+    .flex1{
+        flex:1;
+    }
+    .column{
+        flex-direction: column;
+    }
+    .Center{
+        text-align: center;
+        justify-self: center;
+        
+    }
+    .mg8{
+        margin:8px;
+    }
+    .mgr8{
+        margin-right: 8px;
+    }
+    .mgt8{
+        margin-top: 8px;
+    }
+    .daoHang{
+        padding: 10px 20px;
+        border-bottom: 1px solid rab(190,190,190);
+        font-size: 14px;
+        color: #999;
+    }
+    @media(max-width:600px){
+        .ceBian{
+            display:none;
+    }
+        .neiRong{
+            flex-direction: column;
+    }
+        .shuJuQu{
+            flex-direction: column;
+    }
+        .youQu{
+            margin-left: 8px;
         }
-    </style>
+        .shuJu{
+            margin: 0 0 8px;
+            flex: auto;
+        }
+}
+</style>
 </head>
-<body style="background-color: aliceblue;">
-    
-    <div style="max-width: 700px;height:300px;background:rgb(19, 81, 128);margin:30px auto;text-align:center;font-size:150px">
-        <p>
-            画展
-        </p>
+
+<body class="flex">
+<!--侧边栏-->
+<div style="width: 200px; z-index: 2;" class="baiSe yinYing">
+    <!--头像栏-->
+    <div class="column">
+        <p class="daoHang Center">初级导航站</p>
+        <img src="C:\Users\27345\Desktop\大桌面文件\电子日记\引用图库\雏樱.jpg" alt="wudaohechushi" style="height: 100px;width: 175;"></img>
     </div>
-        <div style="max-width: 700px;background:rgb(97, 128, 128);margin:30px auto;padding:40px;text-align:center;">
-            <img src='C:\Users\27345\Desktop\大桌面文件\电子日记\引用图库\能天使.webp' alt="能天使" weight="500px" height="500px"></img>
-        <p>
-            能天使:雷缪乐
-        </p>
-        </div>
-        <div style="max-width: 700px;background:rgb(219, 173, 220);margin:30px auto;padding:40px;text-align:center;">
-            <img src="C:\Users\27345\Desktop\大桌面文件\电子日记\引用图库\雷缪安.webp" alt="雷缪安" weight="500px" height="500px"></img>
-        <p>
-            雷缪安(雷缪安的姐姐)
-        </p>
-        </div>
-        <div style="max-width: 700px;background:rgba(169, 59, 197, 0.605);margin:30px auto;padding:40px;text-align:center;">
-            <img src="C:\Users\27345\Desktop\大桌面文件\电子日记\引用图库\艾雅法拉.webp" alt="艾雅法拉" weight="500px" height="500px"></img>
-        <p>
-            艾雅法拉(小羊)
-        </p>
-        </div>
-        <div style="max-width: 700px;background:rgb(128, 143, 143);margin:30px auto;padding:40px;text-align:center;">
-            <img src="C:\Users\27345\Desktop\大桌面文件\电子日记\引用图库\阿斯卡伦.webp" alt="阿斯卡伦" weight="500px" height="500px"></img>
-        <p>
-            阿斯卡纶
-        </p>
-        </div>
-        </div>
-        <div style="max-width: 700px;background:rgb(96, 100, 121);margin:30px auto;padding:40px;text-align:center;">
-            <img src="C:\Users\27345\Desktop\大桌面文件\电子日记\引用图库\遥.webp" alt="遥" weight="500px" height="500px"></img>
-        <p>
-            遥
-        </p>
-        </div>
-        </div>
-            <div style="max-width: 700px;height:200px;background:rgb(5, 78, 78);margin:30px auto;text-align:center;font-size: 60px;">
-            <p>
-                好了,你已经欣赏完明日方舟的美女了,该睡大觉了
-            </p>
-            </div>
-      
-
-
-    <div>
-
+    <!--导航栏-->
+    <div class="daoHang">导航</div>
+    <div class="daoHang">导航</div>
+    <div class="daoHang">导航</div>
+    <div class="daoHang">导航</div>
+    <div class="daoHang">导航</div>
+    <div class="daoHang">导航</div>
+</div>
+  <!--主区域-->
+<div class="flex flex1 column">
+  <!--头部栏-->
+  <div style="height: 60px; z-index: 1;" class="baiSe yinYing"></div>
+  <!--内容区-->
+    <div style="overflow: auto;" class="neiRong flex1 flex">
+    <!--左区-->
+    <div style="flex:3" class="flex column mg8">
+        <!--数据区-->
+      <div class="flex shuJuQu">
+        <!--数据块-->
+        <div style="height:100px" class="shuJu flex1 baiSe mgr8 yinYing"></div>
+        <div style="height:100px" class="shuJu flex1 baiSe mgr8 yinYing"></div>
+        <div style="height:100px" class="shuJu flex1 baiSe mgr8 yinYing"></div>
+        <div style="height:100px" class="shuJu flex1 baiSe yinYing"></div>
+      </div>
+      <!--列表区-->
+      <div class="flex column">
+        <!--列表项-->
+        <div style="height: 160px;" class="baiSe mgt8 yinYing"></div>
+         <div style="height: 160px;" class="baiSe mgt8 yinYing"></div>
+         <div style="height: 160px;" class="baiSe mgt8 yinYing"></div>
+         <div style="height: 160px;" class="baiSe mgt8 yinYing"></div>
+          <div style="height: 160px;" class="baiSe mgt8 yinYing"></div>
+      </div>  
     </div>
-    <div>
-
+    <!--右区-->
+    <div style="flex:1" class="youQu flex column mgr8 mgt8">
+        <!--提示区-->
+        <div style="height: 150px;" class="baiSe yinYing"></div>
+        <!--消息区-->
+        <div style="height: 300px;" class="baiSe mgt8 yinYing"></div>
     </div>
-    <div>
-
-    </div>
-
+  </div>
+</div>
 </body>
 </html>
